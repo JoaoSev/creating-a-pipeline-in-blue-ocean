@@ -36,5 +36,11 @@ pipeline {
       }
     }
 
+    stage('Init') {
+      steps {
+        echo 'Init'
+      }
+    }
+
   }
 }
