@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-
     stage('Init') {
       steps {
         echo 'Init'
@@ -42,5 +41,6 @@ pipeline {
         echo 'Deploy Package to SVN'
       }
     }
+
   }
 }
