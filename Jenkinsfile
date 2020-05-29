@@ -1,6 +1,13 @@
 pipeline {
   agent any
   stages {
+
+    stage('Init') {
+      steps {
+        echo 'Init'
+      }
+    }
+
     stage('Build Solution') {
       parallel {
         stage('Minimum Version') {
@@ -35,12 +42,5 @@ pipeline {
         echo 'Deploy Package to SVN'
       }
     }
-
-    stage('Init') {
-      steps {
-        echo 'Init'
-      }
-    }
-
   }
 }
